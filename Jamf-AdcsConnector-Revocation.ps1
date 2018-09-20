@@ -68,7 +68,7 @@ Function Write-Log {
     )
 
     Write-Host "$Message" -ForegroundColor $Color
-    If ($LogPath -ne $null)
+    if ($LogPath -ne $null)
     {
         $logTime = Get-Date -format "yyyy-MM-dd HH:mm:ss zzz"
         Write-Output "[$logTime] $Message" | Out-File -Append $LogPath
@@ -81,7 +81,7 @@ Function Write-Log {
 try 
 {
     $eventSource = 'Jamf-AdcsProxy-Revocation'
-    If (!([System.Diagnostics.EventLog]::SourceExists($eventSource)))
+    if (!([System.Diagnostics.EventLog]::SourceExists($eventSource)))
     {
         New-EventLog -LogName Application -Source $eventSource -ErrorAction Stop
     }
@@ -134,12 +134,12 @@ $pass = ConvertTo-SecureString -String $apiPass -AsPlainText -Force
 $creds = New-Object –TypeName System.Management.Automation.PSCredential –ArgumentList $user, $pass
 
 # Configure TLS 1.2 as default
-If ($apiTls12)
+if ($apiTls12)
 {
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 }
 
-If ($apiSelfSigned)
+if ($apiSelfSigned)
 {
     # Add class to ignore self-signed certs
     add-type @"
