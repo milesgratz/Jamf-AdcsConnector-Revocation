@@ -8,9 +8,9 @@ Certificate revocation is a security requirement to prevent unauthorized devices
 
 # Prerequisites
 
-- Jamf Pro, configured and working
-- Jamf AD CS Connector, configured and working
-- Microsoft CA (ADCS), configured and working
+- **Jamf Pro**, configured and working
+- **Jamf AD CS Connector**, configured and working
+- **Microsoft CA (ADCS)**, configured and working
 
 # Install
 
@@ -52,7 +52,7 @@ You can create the scheduled task manually, otherwise this is an easy way of imp
 3. Copy [**Jamf-AdcsConnector-Revocation.ps1**](/Jamf-AdcsConnector-Revocation.ps1) and [**Jamf-AdcsConnector-Revocation.xml**](/Jamf-AdcsConnector-Revocation.xml) to the folder
 4. Open **Task Scheduler**, right-click **Task Scheduler Library**, choose **Import**
 5. Import the **Jamf-AdcsConnector-Revocation.xml** Scheduled Task XML
-6. Update the Scheduled Task **User or Group** (*by default, it is using the Jamf AD CS Connector computer objecy "SYSTEM" account*) 
+6. Update the Scheduled Task **User or Group** (*by default, it is using the Jamf AD CS Connector computer object "SYSTEM" account*) 
 7. Update the Scheduled Task **Triggers** (*by default, it runs hourly, starting on 2020-01-01*)
 8. Update the Scheduled Task **Actions** (*by default, script is D:\Jamf-AdcsConnector-Revocation\Jamf-AdcsConnector-Revocation.ps1*)
  
