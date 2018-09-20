@@ -64,7 +64,6 @@ Function Write-Log {
     param(
         $Message,
         $LogPath,
-        $EventLog,
         $Color = "Yellow"
     )
 
