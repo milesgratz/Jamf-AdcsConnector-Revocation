@@ -80,7 +80,7 @@ Function Write-Log {
 #======================================================================
 try 
 {
-    $eventSource = 'Jamf-AdcsProxy-Revocation'
+    $eventSource = 'Jamf-AdcsConnector-Revocation'
     if (!([System.Diagnostics.EventLog]::SourceExists($eventSource)))
     {
         New-EventLog -LogName Application -Source $eventSource -ErrorAction Stop
