@@ -12,14 +12,14 @@
 #                                                                     #
 #   1.  Create non-compliance group in Jamf Pro (static or smart)     #
 #   2.  Create service account in Jamf Pro with API "read" access     #
-#   3.  Create scheduled task on Microsoft CA or Jamf ADCS Proxy      #
+#   3.  Create scheduled task on Jamf AD CS Connector                 #
 #        +requires PowerShell PKI module                              #
 #        +requires "Issue and Manage Certificates" on Microsoft CA    #
 #                                                                     #
 #######################################################################
 #                                                                     #
 #      Log Name:         Application                                  #
-#      Source:           Jamf-AdcsProxy-Revocation                    #
+#      Source:           Jamf-AdcsConnector-Revocation                #
 #                                                                     #
 #      EventId 8000:     Success - importing PSPKI module             #
 #      EventId 8001:     Success - querying group                     #
